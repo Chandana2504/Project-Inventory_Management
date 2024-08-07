@@ -1,0 +1,5 @@
+# Ensure Python version compatibility
+python>=3.8
+
+# PDF generation library
+fpdf==1.7.2
