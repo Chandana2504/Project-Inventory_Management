@@ -21,3 +21,4 @@ class Product:
     def update_price(self, price):
         """Update the price of the product, price: New price to set"""
         self.price = price
+        
