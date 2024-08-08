@@ -28,3 +28,9 @@ class Inventory:
     def view_all_products(self):
         """View all products in the inventory, return: List of products with their details"""
         return list(self.products.values())
+
+
+    def view_all_products(self):
+        """View all products in the inventory, return: List of products with their details"""
+        return list(self.products.values())
+
