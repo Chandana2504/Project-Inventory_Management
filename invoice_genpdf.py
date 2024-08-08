@@ -1,4 +1,4 @@
-import fpdf
+from fpdf import FPDF
 
 class Invoice:
     def __init__(self, invoice_id, transactions):
@@ -11,7 +11,7 @@ class Invoice:
     def generate_pdf(self, filename):
         """Generate a PDF file for the invoice.
            filename: Name of the PDF file to save """
-        pdf = fpdf.FPDF()
+        pdf = FPDF()
         pdf.add_page()
         pdf.set_font("Arial", size=12)
 
@@ -30,5 +30,7 @@ class Invoice:
             elif isinstance(transaction, Returns):
                 pdf.cell(200, 10, txt=f"Reason: {transaction.reason}", ln=True, align='L')
             pdf.cell(200, 10, txt=" ", ln=True, align='L')  # Blank line
+
+        pdf.output(filename)
 
         pdf.output(filename)
